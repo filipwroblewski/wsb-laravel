@@ -72,3 +72,13 @@ Route::prefix('admin')->group(function(){
         return 'Użytkownicy';
     });
 });
+
+Route::get('/films', function(){
+    $films = [
+        'nameFilm1' => 'film1',
+        'nameFilm2' => 'film2',
+        'nameFilm3' => 'film3',
+    ];
+
+    return View('film', ['films' => $films]);
+});
