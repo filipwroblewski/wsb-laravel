@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    Miasto: {{ $cityName }}
+    {{-- Miasto: {{ $cityName }} --}}
 </body>
 </html>

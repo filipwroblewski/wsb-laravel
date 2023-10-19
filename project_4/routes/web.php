@@ -43,3 +43,12 @@ Route::get('/pages/{page}', function(string $page){
     ];
     return $pages[$page];
 });
+
+Route::get('/views/{view}', function(string $view){
+    $views = [
+        'city' => 'city',
+        'name' => 'profile.name',
+        'strona_glowna' => 'welcome',
+    ];
+    return View($views[$view]);
+});
