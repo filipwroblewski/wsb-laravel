@@ -52,3 +52,11 @@ Route::get('/views/{view}', function(string $view){
     ];
     return View($views[$view]);
 });
+
+Route::get('/address/{city?};{street?};{zipCode?}', function(string $city = "-", string $street = "-", int $zipCode = null){
+    $zipCode = substr($zipCode, 0, 2)."-".substr($zipCode, 2, 3);
+    echo <<< ADDRESS
+        Miasto: $city ($zipCode)<br>
+        Ulica: $street<hr>
+    ADDRESS;
+});
