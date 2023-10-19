@@ -82,3 +82,13 @@ Route::get('/films', function(){
 
     return View('film', ['films' => $films]);
 });
+
+Route::get('/users', function(){
+    $users = [
+        ['firstName' => 'Bob', 'lastName' => 'Bobson', 'city' => 'Poznań'],
+        ['firstName' => 'Ben', 'lastName' => 'Benson', 'city' => 'Warszawa'],
+        ['firstName' => 'Tom', 'lastName' => 'Tomson', 'city' => 'Wrocław'],
+    ];
+
+    return View('users', ['users' => $users]);
+});
