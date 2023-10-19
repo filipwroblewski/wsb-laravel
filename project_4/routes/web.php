@@ -31,6 +31,6 @@ Route::get('show_name', function(){
     return 'text';
 });
 
-Route::get('show_blade_city', function(){
-    return View('city');
+Route::get('show_blade_city/{city}', function(string $city){
+    return View('city', ['cityName' => $city ]);
 });
