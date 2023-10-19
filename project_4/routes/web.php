@@ -34,3 +34,12 @@ Route::get('show_name', function(){
 Route::get('show_blade_city/{city}', function(string $city){
     return View('city', ['cityName' => $city ]);
 });
+
+Route::get('/pages/{page}', function(string $page){
+    $pages = [
+        'home' => 'Strona domowa',
+        'contact' => 'bob.bobson@o2.pl',
+        'address' => 'Pozań, ul. Długa 12/3',
+    ];
+    return $pages[$page];
+});
