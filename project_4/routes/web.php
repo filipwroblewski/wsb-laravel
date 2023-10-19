@@ -30,3 +30,7 @@ Route::middleware([
 Route::get('show_name', function(){
     return 'text';
 });
+
+Route::get('show_blade_city', function(){
+    return View('city');
+});
