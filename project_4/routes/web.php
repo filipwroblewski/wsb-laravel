@@ -62,3 +62,13 @@ Route::get('/address/{city?};{street?};{zipCode?}', function(string $city = "-",
 })->name('address');
 
 Route::redirect('/adres/{city?};{street?};{zipCode?}', '/address/{city?};{street?};{zipCode?}');
+
+Route::prefix('admin')->group(function(){
+    Route::get('/home', function(){
+        return 'Strona domowa administratora';
+    });
+    
+    Route::get('/users', function(){
+        return 'Użytkownicy';
+    });
+});
