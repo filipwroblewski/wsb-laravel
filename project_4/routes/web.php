@@ -59,4 +59,6 @@ Route::get('/address/{city?};{street?};{zipCode?}', function(string $city = "-",
         Miasto: $city ($zipCode)<br>
         Ulica: $street<hr>
     ADDRESS;
-});
+})->name('address');
+
+Route::redirect('/adres/{city?};{street?};{zipCode?}', '/address/{city?};{street?};{zipCode?}');
