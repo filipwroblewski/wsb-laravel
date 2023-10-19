@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    Filmy:
     <ul>
         @foreach ($films as $film)
             <li>{{ $film }}</li>
