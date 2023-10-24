@@ -14,7 +14,10 @@ class ShowDbController extends Controller
         ->where('lastName', 'Nowak')
         ->get();*/
 
-        $data = DB::table('users_test')->count();
-        echo $data;
+        /*$data = DB::table('users_test')->count();
+        echo $data;*/
+
+        $data = DB::table('users_test')->where('lastname', 'Nowak')->get();
+        print_r($data);
     }
 }
