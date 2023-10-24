@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ShowController;
+use \App\Http\Controllers\ShowDbController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::middleware([
 
 Route::get('show', [ShowController::class, 'show']);
 Route::get('showView', [ShowController::class, 'showView']);
+
+Route::get('showDbTable', [ShowDbController::class, 'showDbTable']);
