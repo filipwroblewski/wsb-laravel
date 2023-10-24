@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class ShowDbController extends Controller
 {
     public function showDbTable(){
-        return DB::select('select * from users_test');
+        // return DB::select('select * from users_test');
+        return DB::table('users_test')->get();
     }
 }
