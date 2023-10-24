@@ -22,11 +22,21 @@ class ShowDbController extends Controller
 
         //return DB::table('users_test')->where('lastName', 'Nowak')->delete();
 
-        DB::table('users_test')
+        /*DB::table('users_test')
         ->insert([
             'firstName' => 'Janusz',
             'lastName' => 'Kowal',
             'birthday' => '2000-08-21',
-        ]);
+        ]);*/
+
+        $data = DB::table('users_test')
+            ->where('lastName', 'Kowal')
+            ->update([
+                'firstName' => 'Paweł',
+                'lastName' => 'Pawlak',
+            ]);
+
+        echo $data;
+
     }
 }
