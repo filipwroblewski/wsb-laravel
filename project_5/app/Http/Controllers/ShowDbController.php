@@ -17,7 +17,9 @@ class ShowDbController extends Controller
         /*$data = DB::table('users_test')->count();
         echo $data;*/
 
-        $data = DB::table('users_test')->where('lastname', 'Nowak')->get();
-        print_r($data);
+        /*$data = DB::table('users_test')->where('lastname', 'Nowak')->get();
+        print_r($data);*/
+
+        return DB::table('users_test')->where('lastName', 'Nowak')->delete();
     }
 }
