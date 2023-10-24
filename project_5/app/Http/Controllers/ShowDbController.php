@@ -29,14 +29,16 @@ class ShowDbController extends Controller
             'birthday' => '2000-08-21',
         ]);*/
 
-        $data = DB::table('users_test')
+        /*$data = DB::table('users_test')
             ->where('lastName', 'Kowal')
             ->update([
                 'firstName' => 'Paweł',
                 'lastName' => 'Pawlak',
             ]);
 
-        echo $data;
+        echo $data;*/
+
+        return DB::table('users_test')->avg('weight');
 
     }
 }
