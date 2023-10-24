@@ -38,7 +38,7 @@ class ShowDbController extends Controller
 
         echo $data;*/
 
-        return DB::table('users_test')->avg('weight');
+        return number_format(DB::table('users_test')->avg('weight'), '2');
 
     }
 }
