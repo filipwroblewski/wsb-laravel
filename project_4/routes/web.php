@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +93,5 @@ Route::get('/users', function(){
 
     return View('users', ['users' => $users]);
 });
+
+Route::get('cars', [CarController::class, 'ShowCarTable']);
