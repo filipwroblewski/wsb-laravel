@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 class CarController extends Controller
 {
     public function ShowCarTable(){
-        return 'Cars';
+        $data = DB::table('cars')->get();
+
+        return view('cars', ['cars' => $data]);
     }
 }
