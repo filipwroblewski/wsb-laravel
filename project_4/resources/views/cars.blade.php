@@ -16,13 +16,13 @@
         </tr>
         @foreach($cars as $car)
             <tr>
-                <td>{{ $car -> brand }}</td>
-                <td>{{ $car -> model }}</td>
-                <td>{{ $car -> capacity }}</td>
+                <td>{{ $car->brand }}</td>
+                <td>{{ $car->model }}</td>
+                <td>{{ $car->capacity }}</td>
             </tr>
         @endforeach
     </table>
 
-    {{ $cars->links('pagination::bootstrap-5')}}
+    {{ $cars->links('pagination::bootstrap-5') }}
 </body>
 </html>
