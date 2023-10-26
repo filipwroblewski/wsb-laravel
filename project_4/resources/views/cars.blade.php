@@ -23,6 +23,6 @@
         @endforeach
     </table>
 
-    {{ $cars->links()}}
+    {{ $cars->links('pagination::bootstrap-5')}}
 </body>
 </html>
