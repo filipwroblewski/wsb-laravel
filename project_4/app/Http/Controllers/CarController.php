@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class CarController extends Controller
 {
     public function ShowCarTable(){
-        $data = DB::table('cars')->get();
+        $data = DB::table('cars')->paginate(2);
 
         return view('cars', ['cars' => $data]);
     }

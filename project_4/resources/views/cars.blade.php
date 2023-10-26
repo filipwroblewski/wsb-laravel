@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>Samochody</h3>
-    
+
     <table>
         <tr>
             <th>Marka</th>
@@ -22,5 +22,7 @@
             </tr>
         @endforeach
     </table>
+
+    {{ $cars->links()}}
 </body>
 </html>
