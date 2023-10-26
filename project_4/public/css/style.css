@@ -1,5 +1,8 @@
 table, tr, th, td{
     border: 1px solid grey;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 10px;
 }
 
 .table tbody tr:nth-child(even){

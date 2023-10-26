@@ -30,5 +30,8 @@
     </table>
 
     {{ $cars->links('pagination::bootstrap-5') }}
+
+    <a href="/addCar" class="btn btn-primary">Dodaj nowy samochód</a>
+    
 </body>
 </html>

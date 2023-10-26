@@ -95,3 +95,6 @@ Route::get('/users', function(){
 });
 
 Route::get('cars', [CarController::class, 'ShowCarTable']);
+
+Route::view('/addCar', 'forms.addcarform');
+Route::post('AddCar', [CarController::class, 'AddCar']);
