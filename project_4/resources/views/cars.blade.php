@@ -9,19 +9,24 @@
 <body>
     <h3>Samochody</h3>
 
-    <table>
-        <tr>
-            <th>Marka</th>
-            <th>Model</th>
-            <th>Pojemność</th>
-        </tr>
-        @foreach($cars as $car)
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>Pojemność</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($cars as $car)
             <tr>
                 <td>{{ $car->brand }}</td>
                 <td>{{ $car->model }}</td>
                 <td>{{ $car->capacity }}</td>
             </tr>
-        @endforeach
+            @endforeach
+        </tbody>
+        
     </table>
 
     {{ $cars->links('pagination::bootstrap-5') }}
