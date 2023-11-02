@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class ShowDbTableController extends Controller
 {
@@ -18,7 +19,7 @@ class ShowDbTableController extends Controller
         $name = $req->input('name');
         $email = $req->input('email');
         $email_confirmation = $req->input('email_confirmation');
-        $password = $req->input('password');
+        $password = Hash::make($req->input('password'));
         $password_confirmation = $req->input('password_confirmation');
 
         $req ->validate([
