@@ -23,9 +23,9 @@ class ShowDbTableController extends Controller
         $password_confirmation = $req->input('password_confirmation');
 
         $req ->validate([
-            'name' => 'required | min:2',
-            'email' => 'required | min:5 | same:email_confirmation',
-            'password' => 'required | min:5 | same:password_confirmation',
+            'name' => 'required|min:2',
+            'email' => 'required|min:5|same:email_confirmation',
+            'password' => 'required|min:5|same:password_confirmation|regex:/^.*(?=.{8,})/',
         ]);
 
         $result = DB::insert('insert into users (name, email, password) values (?, ?, ?)', [$name, $email, $password]);
