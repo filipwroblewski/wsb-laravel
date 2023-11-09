@@ -11,7 +11,7 @@ class CreateFakeData extends Controller
         $faker = Faker::create('pl_PL');
         $users = [];
         for ($i = 0; $i < 5; $i++){
-            $users = [
+            $users[] = [
                 'name' => $faker->name,
             ];
         }
