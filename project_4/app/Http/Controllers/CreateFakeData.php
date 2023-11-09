@@ -14,6 +14,7 @@ class CreateFakeData extends Controller
             $users[] = [
                 'name' => $faker->firstName,
                 'lastName' => $faker->lastName,
+                'email' => $faker->email,
             ];
         }
 
