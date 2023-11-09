@@ -15,9 +15,12 @@ class CreateFakeData extends Controller
                 'name' => $faker->firstName,
                 'lastName' => $faker->lastName,
                 'email' => $faker->email,
+                'password' => bcrypt($faker->password),
+                'created_at' => now(),
+                'updated_at' => now(),
             ];
         }
 
-        print_r($users);
+        print_r($users[0]);
     }
 }
