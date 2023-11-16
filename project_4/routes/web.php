@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CarController;
 use \App\Http\Controllers\ShowDbTableController;
 use \App\Http\Controllers\CreateFakeData;
+use \App\Http\Controllers\BooksController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,3 +107,5 @@ Route::view('/addUser', 'forms.adduserform');
 Route::post('AddUser', [ShowDbTableController::class, 'AddUser']);
 
 Route::get('showfakeuser', [CreateFakeData::class, 'Show']);
+
+Route::get('/books', [BooksController::class, 'ShowBooks']);
