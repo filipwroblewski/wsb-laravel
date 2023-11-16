@@ -5,6 +5,7 @@ use \App\Http\Controllers\CarController;
 use \App\Http\Controllers\ShowDbTableController;
 use \App\Http\Controllers\CreateFakeData;
 use \App\Http\Controllers\BooksController;
+use \App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,3 +110,7 @@ Route::post('AddUser', [ShowDbTableController::class, 'AddUser']);
 Route::get('showfakeuser', [CreateFakeData::class, 'Show']);
 
 Route::get('/books', [BooksController::class, 'ShowBooks']);
+
+Route::get('/articles/index', [ArticleController::class, 'index']);
+Route::view('/addArticle', 'forms.addarticleform');
+Route::post('AddArticle', [ArticleController::class, 'AddArticle']);
